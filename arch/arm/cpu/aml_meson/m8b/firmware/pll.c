@@ -102,9 +102,9 @@ SPL_STATIC_FUNC void pll_init(struct pll_clk_settings * plls)
 
 	int n_pll_try_times = 0;
 
-	//SYS PLL init
+	//SYS PLL init   PLLfix
 	do{
-		//BANDGAP reset for SYS_PLL,MPLL lock fail		
+		//BANDGAP reset for SYS_PLL,MPLL lock fail	
 		Wr_reg_bits(HHI_MPLL_CNTL6,0,26,1);
 		__udelay(10);
 		Wr_reg_bits(HHI_MPLL_CNTL6,1,26,1);
